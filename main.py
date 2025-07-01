@@ -55,7 +55,7 @@ def main():
                 for i in range(num_stocks):
                     if tickers[i]:
                         with cols[i]:
-                            st.metric(f"#{i+1} Ticker", tickers[i], keywords[i])
+                            st.metric(f"#{i+1} Ticker",  value=f"{tickers[i]} - {keywords[i]}")
                 
                 tickers_keywords = [(tickers[i], keywords[i]) for i in range(num_stocks) if tickers[i]]
                 
